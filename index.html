@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tijaabo — Simple. Fast. Reliable.</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#" class="logo">Tijaabo</a>
+      <nav>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="container hero-content">
+      <h1>Build Something Great</h1>
+      <p>A simple, clean, and responsive website template to help you get started quickly.</p>
+      <a href="#contact" class="btn">Get Started</a>
+    </div>
+  </section>
+
+  <section id="features" class="features">
+    <div class="container">
+      <h2>Features</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Fast</h3>
+          <p>Lightweight code that loads quickly and performs well on every device.</p>
+        </div>
+        <div class="card">
+          <h3>Responsive</h3>
+          <p>Looks great on desktop, tablet, and mobile screens alike.</p>
+        </div>
+        <div class="card">
+          <h3>Simple</h3>
+          <p>Clean HTML, CSS, and JavaScript — easy to customize and extend.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="container">
+      <h2>About</h2>
+      <p>This is a simple web design starter built with plain HTML, CSS, and JavaScript — no frameworks required. Use it as a foundation for a portfolio, landing page, or small business site.</p>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <form id="contactForm">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+      <p id="formStatus" class="form-status"></p>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Tijaabo. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
