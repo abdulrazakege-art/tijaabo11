@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin — Messages</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .admin-wrap { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+  .key-form { display: flex; gap: 10px; margin-bottom: 24px; }
+  .key-form input { flex: 1; padding: 10px; border: 1px solid var(--border); border-radius: 6px; }
+  table { width: 100%; border-collapse: collapse; background: #fff; }
+  th, td { text-align: left; padding: 12px; border-bottom: 1px solid var(--border); font-size: 0.95rem; }
+  th { background: var(--light); }
+  .empty { color: var(--gray); text-align: center; padding: 40px 0; }
+</style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="logo">Tijaabo</a>
+    </div>
+  </header>
+
+  <div class="admin-wrap">
+    <h2>Contact Messages</h2>
+    <form class="key-form" id="keyForm">
+      <input type="password" id="adminKey" placeholder="Admin key" required>
+      <button type="submit" class="btn" style="background:var(--primary); color:#fff;">Load</button>
+    </form>
+    <div id="results"></div>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>

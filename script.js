@@ -16,8 +16,32 @@ navLinks.querySelectorAll('a').forEach(link => {
 const form = document.getElementById('contactForm');
 const status = document.getElementById('formStatus');
 
-form.addEventListener('submit', (e) => {
+form.addEventListener('submit', async (e) => {
   e.preventDefault();
-  status.textContent = 'Thanks for reaching out! We will get back to you soon.';
-  form.reset();
+
+  const data = {
+    name: form.name.value,
+    email: form.email.value,
+    message: form.message.value,
+  };
+
+  status.textContent = 'Sending...';
+
+  try {
+    const res = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    });
+    const result = await res.json();
+
+    if (!res.ok) {
+      throw new Error(result.error || 'Something went wrong.');
+    }
+
+    status.textContent = 'Thanks for reaching out! We will get back to you soon.';
+    form.reset();
+  } catch (err) {
+    status.textContent = err.message;
+  }
 });
